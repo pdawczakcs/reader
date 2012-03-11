@@ -1,0 +1,15 @@
+<div class="well">
+<%= form_tag parse_path, :remote => true, :method => :post, :class => "url-form" do %>
+  <div class="input-prepend my-wrapper">
+    <span class="add-on">http://www.bodypak.pl/</span><%= text_field_tag :url, "", :class => "very-long" %><%= submit_tag "OK", :onclick => "$('#indicator').show();" %><div id="indicator"></div>
+  </div>
+<% end %>
+</div>
+
+<%= text_area_tag :content, "", :id => "textarea_content" %>
+
+<div id="preview">
+  <%= link_to "Pokaż podgląd..." %>
+  <div id="content">
+  </div>
+</div>

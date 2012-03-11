@@ -1,0 +1,4 @@
+var str = "<%= escape_javascript(@html) %>";
+$("#textarea_content").text(str);
+$("#preview div#content").hide().html(str);
+$("#indicator").hide();
